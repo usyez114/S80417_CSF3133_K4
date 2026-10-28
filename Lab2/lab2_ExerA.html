@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UMT Programming Workshop 2026</title>
+</head>
+<body>
+
+  
+  <header>
+    <h1>UMT Programming Workshop 2026</h1>
+    <p>Code. Create. Collaborate. A one-day event for FSKM students.</p>
+  </header>
+
+  
+  <nav>
+    <a href="#about">About</a> |
+    <a href="#schedule">Schedule</a> |
+    <a href="#register">Register</a>
+  </nav>
+
+  
+  <section id="about">
+    <h2>About the Event</h2>
+    <p>Join us for a full day of talks, hands-on coding and a mini hackathon.</p>
+
+    
+    <article>
+      <h3>Python Basics Workshop</h3>
+      <p>A beginner-friendly session on variables, loops and functions, led by Mr. Hafiz.</p>
+    </article>
+
+    
+    <article>
+      <h3>Mini Hackathon</h3>
+      <p>Teams of three build a small web app in two hours and present it to the judges.</p>
+    </article>
+  </section>
+
+  
+  <section id="schedule">
+    <h2>Event Schedule</h2>
+    <table border="1">
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Venue</th>
+        <th>Person in Charge</th>
+      </tr>
+      <tr>
+        <td>8:30 AM</td>
+        <td>Registration</td>
+        <td>Main Lobby</td>
+        <td>Organising Committee</td>
+      </tr>
+      <tr>
+        <td>9:30 AM</td>
+        <td>Opening and Keynote Talk</td>
+        <td>Dewan Seminar</td>
+        <td>Dr. Aminah</td>
+      </tr>
+      
+      <tr>
+        <td>10:30 AM</td>
+        <td>Python Basics Workshop</td>
+        <td rowspan="2">Lab 1</td>
+        <td>Mr. Hafiz</td>
+      </tr>
+      <tr>
+        <td>11:30 AM</td>
+        <td>Hands-on Coding Session</td>
+        <td>Ms. Nurul</td>
+      </tr>
+      <!-- colspan: Lunch Break spans 3 columns -->
+      <tr>
+        <td>1:00 PM</td>
+        <td colspan="3">Lunch Break</td>
+      </tr>
+      <tr>
+        <td>2:00 PM</td>
+        <td>Web Development Session</td>
+        <td>Lab 2</td>
+        <td>Dr. Farid</td>
+      </tr>
+      <tr>
+        <td>4:00 PM</td>
+        <td>Mini Hackathon</td>
+        <td>Lab 3</td>
+        <td>Mr. Hafiz</td>
+      </tr>
+      <tr>
+        <td>6:00 PM</td>
+        <td>Prize Giving and Closing</td>
+        <td>Dewan Seminar</td>
+        <td>Dr. Aminah</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- SECTION 3: Registration form -->
+  <section id="register">
+    <h2>Registration</h2>
+    <form action="register.html" method="post">
+
+      <!-- Text inputs: label for = input id -->
+      <p>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname">
+      </p>
+      <p>
+        <label for="matric">Matric Number:</label>
+        <input type="text" id="matric" name="matric">
+      </p>
+      <p>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+      </p>
+
+      
+      <fieldset>
+        <legend>Year of Study</legend>
+        <input type="radio" id="year1" name="year" value="1">
+        <label for="year1">Year 1</label>
+        <input type="radio" id="year2" name="year" value="2">
+        <label for="year2">Year 2</label>
+        <input type="radio" id="year3" name="year" value="3">
+        <label for="year3">Year 3</label>
+        <input type="radio" id="year4" name="year" value="4">
+        <label for="year4">Year 4</label>
+      </fieldset>
+
+      
+      <fieldset>
+        <legend>Sessions to Join</legend>
+        <input type="checkbox" id="s1" name="sessions" value="python">
+        <label for="s1">Python Basics Workshop</label><br>
+        <input type="checkbox" id="s2" name="sessions" value="web">
+        <label for="s2">Web Development Session</label><br>
+        <input type="checkbox" id="s3" name="sessions" value="hackathon">
+        <label for="s3">Mini Hackathon</label>
+      </fieldset>
+
+      
+      <p>
+        <label for="programme">Programme:</label>
+        <select id="programme" name="programme">
+          <option value="cs">Computer Science</option>
+          <option value="se">Software Engineering</option>
+          <option value="ds">Data Science</option>
+          <option value="math">Mathematics</option>
+        </select>
+      </p>
+
+      <
+      <p><input type="submit" value="Register"></p>
+    </form>
+  </section>
+
+  
+  <footer>
+    <p>Organised by FSKM Student Committee</p>
+    <p>&copy; 2026 Faculty of Computer Science and Mathematics, UMT</p>
+  </footer>
+
+</body>
+</html>
