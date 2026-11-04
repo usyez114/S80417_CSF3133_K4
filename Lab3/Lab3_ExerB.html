@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ticket Booking</title>
+</head>
+<body>
+<!--
+ERRORS FOUND (line numbers refer to the given code)
+Error 1 (Line 1): <!DOCTYPE> is incomplete. Fixed to: <!DOCTYPE html>
+Error 2 (Line 9): Wrong nesting. </h1></span> closes in the wrong order. Fixed to <span>...</span></h1>
+Error 3 (Line 11): <span id="content"> is an inline element wrapping block elements. Changed to <div>
+Error 4 (Line 36): Closing </span> matches the wrong element. Changed to </div>
+Error 5 (Line 13): Raw "<" must be written as the entity &lt;
+Error 6 (Line 13): "&amp" is missing its semicolon. Fixed to &amp;
+Error 7 (Line 14): oninput joins values as text (2 and 3 gives 23). Fixed with Number() so 2 + 3 = 5
+Error 8 (Line 18): type="emial" is a typo. Fixed to type="email" (and added required)
+Error 9 (Line 22): list="movies" does not match the datalist id "movielist". Fixed to list="movies" and id="movies"
+Error 10 (Line 32): Range min="5" max="1" is reversed. Fixed to min="1" max="5" step="1"
+Error 11 (Line 33): <output> for="adult kid" uses a wrong id. Fixed to for="adult child"
+Error 12 (Line 38): &Copy; is wrong because entity names are case-sensitive. Fixed to &copy;
+-->
+
+<!-- ===== HEADER ===== -->
+<div id="header">
+<h1>e-Ticket <span>Your Campus Cinema</span></h1>
+</div>
+
+<!-- ===== SIDEBAR (NEW): Now Showing list using strong, span and a ===== -->
+<div id="sidebar">
+<h2>Now Showing</h2>
+<ul>
+<li><strong>Space Rangers</strong> <span>(PG-13)</span> <a href="https://example.com/trailer-space-rangers">Watch trailer</a></li>
+<li><strong>Kampung Comedy</strong> <span>(U)</span> <a href="https://example.com/trailer-kampung-comedy">Watch trailer</a></li>
+<li><strong>Midnight Library</strong> <span>(18)</span> <a href="https://example.com/trailer-midnight-library">Watch trailer</a></li>
+</ul>
+</div>
+
+<!-- ===== CONTENT: booking form ===== -->
+<div id="content">
+<h2>Book Your Ticket</h2>
+<p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+<!-- oninput: total = number of tickets, price = adult RM12 + child RM8 -->
+<form action="booking.php" method="post" oninput="total.value = Number(adult.value) + Number(child.value); price.value = Number(adult.value) * 12 + Number(child.value) * 8">
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" required><br>
+
+<!-- NEW: phone number (tel, placeholder, required) -->
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br>
+
+<label for="date">Show date:</label>
+<input type="date" id="date" name="date"><br>
+
+<!-- NEW: show time -->
+<label for="time">Show time:</label>
+<input type="time" id="time" name="time"><br>
+
+<!-- Movie input linked to datalist: list must equal datalist id -->
+<label for="movie">Movie:</label>
+<input id="movie" name="movie" list="movies"><br>
+<datalist id="movies">
+<option value="Space Rangers">
+<option value="Kampung Comedy">
+<option value="Midnight Library">
+</datalist>
+
+<label for="adult">Adult tickets:</label>
+<input type="number" id="adult" name="adult" min="0" value="0"><br>
+
+<label for="child">Child tickets:</label>
+<input type="number" id="child" name="child" min="0" value="0"><br>
+
+<label for="rating">Rate our service:</label>
+<input type="range" id="rating" name="rating" min="1" max="5" step="1" value="3"><br>
+
+<!-- Output 1: total number of tickets -->
+Total tickets: <output name="total" for="adult child">0</output><br>
+
+<!-- NEW Output 2: total price (adult RM12, child RM8) -->
+Total price (RM): <output name="price" for="adult child">0</output><br>
+
+<input type="submit" value="Book Now">
+</form>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div id="footer">
+<p>&copy; 2026 CineKampus. All rights reserved.</p>
+<!-- NEW: footer text using &reg; &lt; and &amp; -->
+<p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday</p>
+<p>Students &amp; staff welcome.</p>
+</div>
+
+</body>
+</html>

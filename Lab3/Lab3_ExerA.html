@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CampusBake Online Order</title>
+</head>
+<body>
+
+<!-- ===== HEADER: bakery name (h1) with a span inside for the slogan ===== -->
+<div id="header">
+<h1>CampusBake&reg; <span>Fresh from the oven, right on campus!</span></h1>
+</div>
+
+<!-- ===== NAV: inline links (a) separated by " | " ===== -->
+<div id="nav">
+<a href="#intro">Home</a> |
+<a href="#order">Order Now</a> |
+<a href="#pricelist">Price List</a> |
+<a href="#footer">Contact</a>
+</div>
+
+<!-- ===== CONTENT: introduction + order form ===== -->
+<div id="content">
+
+<!-- Introduction paragraph: inline elements strong, em, span and a inside a block element p -->
+<h2 id="intro">Welcome</h2>
+<p>Welcome to <strong>CampusBake</strong>! We bake <em>fresh cupcakes and cakes</em> every morning.
+<span>Pre-order today</span> and pick up between classes, or read
+<a href="#pricelist">our price list</a> first.</p>
+
+<!-- Order form wrapped in a div -->
+<div id="order">
+<h2>Order Form</h2>
+
+<!-- oninput calculates the total price every time any input changes -->
+<form action="order.php" method="post"
+oninput="total.value = Number(cupcakes.value) * 3 + Number(slices.value) * 5">
+
+<!-- Customer name: placeholder, required, autofocus -->
+<p>
+<label for="custname">Name:</label>
+<input type="text" id="custname" name="custname" placeholder="Enter your full name" required autofocus>
+</p>
+
+<!-- Phone number: type tel, required -->
+<p>
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
+</p>
+
+<!-- E-mail: type email, required (browser checks the format) -->
+<p>
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" placeholder="you@example.com" required>
+</p>
+
+<!-- Pick-up date and time -->
+<p>
+<label for="pdate">Pick-up date:</label>
+<input type="date" id="pdate" name="pdate">
+</p>
+<p>
+<label for="ptime">Pick-up time:</label>
+<input type="time" id="ptime" name="ptime">
+</p>
+
+<!-- Flavour: input linked to a datalist (list value = datalist id) -->
+<p>
+<label for="flavour">Flavour:</label>
+<input id="flavour" name="flavour" list="flavours" placeholder="Choose or type a flavour">
+</p>
+<datalist id="flavours">
+<option value="Chocolate">
+<option value="Vanilla">
+<option value="Red Velvet">
+<option value="Strawberry">
+<option value="Pandan">
+</datalist>
+
+<!-- Icing colour (color picker) and sweetness level (range slider 1-5) -->
+<p>
+<label for="icing">Icing colour:</label>
+<input type="color" id="icing" name="icing" value="#ff99cc">
+</p>
+<p>
+<label for="sweet">Sweetness (1-5):</label>
+<input type="range" id="sweet" name="sweet" min="1" max="5" step="1" value="3">
+</p>
+
+<!-- ===== PRICE CALCULATOR: number inputs + output element ===== -->
+<h2>Price Calculator</h2>
+<p>
+<label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+<input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+</p>
+<p>
+<label for="slices">Cake Slices (RM 5.00 each):</label>
+<input type="number" id="slices" name="slices" min="0" value="0">
+</p>
+<p>
+Total: RM <output name="total" for="cupcakes slices">0</output>
+</p>
+
+<!-- Submit button -->
+<p>
+<input type="submit" value="Place Order">
+</p>
+
+</form>
+</div>
+
+</div>
+
+<!-- ===== SIDEBAR: price list using a list + entities ===== -->
+<div id="sidebar">
+<h2 id="pricelist">Price List</h2>
+<ul>
+<li>Cupcake &ndash; RM&nbsp;3.00 (about &pound;0.55)</li>
+<li>Cake Slice &ndash; RM&nbsp;5.00 (about &euro;1.00)</li>
+<li>Whole Cake &ndash; RM&nbsp;45.00</li>
+</ul>
+<p>Special: Orders &gt; 10 pieces get a free drink!</p>
+<p>Pick-up only for orders &lt; RM&nbsp;100.</p>
+</div>
+
+<!-- ===== FOOTER: copyright and brand entities ===== -->
+<div id="footer">
+<p>&copy; 2026 CampusBake&reg; &amp; Friends. All rights reserved.</p>
+</div>
+
+</body>
+</html>
+
