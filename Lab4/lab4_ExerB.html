@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- viewport so the page fits small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-Café Campus</title>
+
+  <!-- external css, all styles are in cafe.css now -->
+  <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+
+  <!--
+    Errors found in the given code (line numbers are from the original code):
+    Error 1 (Line 7): an HTML comment was used inside the style block, css needs /* */ comments.
+    Error 2 (Line 9): list-style-type: no is wrong, should be none.
+    Error 3 (Lines 14-15): link states in wrong order, a:visited must come before a:hover.
+    Error 4 (Line 17): text-decoration: overlined is wrong, should be overline.
+    Error 5 (Line 19): selector #intro does not match the html (line 41 uses class="intro"), changed to .intro.
+    Error 6 (Line 21): missing closing bracket } for the #intro rule.
+    Error 7 (Line 22): highlight is missing the dot, should be .highlight.
+    Error 8 (Line 34): href="menu" does nothing, should be href="#menu".
+    Error 9 (Lines 43 and 46): id="item" used twice, ids must be unique, changed to class="item".
+    Error 10 (Line 53): video has no controls attribute so it cannot be played.
+    Error 11 (Line 54): source type="mp4" is wrong, should be video/mp4.
+  -->
+
+  <!-- header -->
+  <header>
+    <h1>e-Café Campus</h1>
+  </header>
+
+  <!-- navigation bar, added Feedback link -->
+  <nav>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- menu section, each item now has an old price and a new price -->
+  <section id="menu">
+    <h2>Today's Menu</h2>
+    <p class="intro">Freshly brewed coffee and local delights every day.</p>
+
+    <article class="item">
+      <h3>Kopi Tarik</h3>
+      <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+    </article>
+
+    <article class="item">
+      <h3>Nasi Lemak</h3>
+      <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+    </article>
+  </section>
+
+  <!-- video section, put cafe.mp4 in the same folder -->
+  <section id="video">
+    <h2>Watch Our Story</h2>
+
+    <!-- figure and figcaption for the caption under the video -->
+    <figure>
+      <video width="400" height="300" controls>
+        <source src="cafe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Watch how our café started</figcaption>
+    </figure>
+  </section>
+
+  <!-- feedback section with form -->
+  <section id="feedback">
+    <h2>Feedback</h2>
+
+    <form class="feedback-form" action="#" method="post">
+      <p>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name">
+      </p>
+
+      <p>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email">
+      </p>
+
+      <p>Visit type:<br>
+        <input type="radio" id="dinein" name="visit" value="dine-in">
+        <label for="dinein">Dine-in</label>
+        <input type="radio" id="takeaway" name="visit" value="take-away">
+        <label for="takeaway">Take-away</label>
+      </p>
+
+      <p>Favourite items:<br>
+        <input type="checkbox" id="kopi" name="favourite" value="kopi-tarik">
+        <label for="kopi">Kopi Tarik</label>
+        <input type="checkbox" id="nasi" name="favourite" value="nasi-lemak">
+        <label for="nasi">Nasi Lemak</label>
+        <input type="checkbox" id="teh" name="favourite" value="teh-ais">
+        <label for="teh">Teh Ais</label>
+      </p>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- footer with email link -->
+  <footer id="contact">
+    <p>&copy; 2026 e-Café Campus</p>
+    <address>
+      <a href="mailto:hello@ecafecampus.my">hello@ecafecampus.my</a>
+    </address>
+  </footer>
+
+</body>
+</html>

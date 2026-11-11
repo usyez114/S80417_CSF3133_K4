@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Terengganu</title>
+
+  <!-- external css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- internal css, only for this page -->
+  <style>
+    #trip h2 {
+      color: #006d77;
+    }
+    .seat-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- header -->
+  <header>
+    <h1>Visit Terengganu</h1>
+  </header>
+
+  <!-- navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#trip">Trip</a></li>
+    </ul>
+  </nav>
+
+  <!-- destinations section -->
+  <section id="destinations">
+    <h2>Destinations</h2>
+
+    <article class="card">
+      <h3>Pulau Redang</h3>
+      <p>Clear water and nice coral reefs, good for snorkelling.</p>
+      <p class="price"><span class="old-price">RM 299</span> RM 199</p>
+    </article>
+
+    <article class="card">
+      <h3>Pulau Perhentian</h3>
+      <p>White sandy beaches, good for snorkelling and diving.</p>
+      <p class="price"><span class="old-price">RM 350</span> RM 249</p>
+    </article>
+
+    <article class="card">
+      <h3>Masjid Kristal</h3>
+      <p>A shiny mosque located at Taman Tamadun Islam, Kuala Terengganu.</p>
+      <p class="price"><span class="old-price">RM 120</span> RM 89</p>
+    </article>
+  </section>
+
+  <!-- video section -->
+  <section id="video">
+    <h2>Video</h2>
+
+    <!-- put terengganu.mp4 in the same folder as this file -->
+    <figure>
+      <video width="640" height="360" controls>
+        <source src="c:\Users\mmurs\Downloads\lab4\14879837-uhd_3840_2160_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Terengganu tourism promotion video</figcaption>
+    </figure>
+  </section>
+
+  <!-- trip section with form -->
+  <section id="trip">
+    <h2>Trip Interest</h2>
+
+    <!-- meter to show how many seats are filled -->
+    <p class="seat-label">Seats filled:</p>
+    <meter min="0" max="40" value="28"></meter>
+
+    <form class="trip-form" action="#" method="post">
+      <p>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name">
+      </p>
+
+      <p>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email">
+      </p>
+
+      <p>Traveller type:<br>
+        <input type="radio" id="student" name="traveller" value="student">
+        <label for="student">Student</label>
+        <input type="radio" id="staff" name="traveller" value="staff">
+        <label for="staff">Staff</label>
+        <input type="radio" id="public" name="traveller" value="public">
+        <label for="public">Public</label>
+      </p>
+
+      <p>Interests:<br>
+        <input type="checkbox" id="islands" name="interest" value="islands">
+        <label for="islands">Islands</label>
+        <input type="checkbox" id="food" name="interest" value="food">
+        <label for="food">Food</label>
+        <input type="checkbox" id="culture" name="interest" value="culture">
+        <label for="culture">Culture</label>
+        <input type="checkbox" id="nature" name="interest" value="nature">
+        <label for="nature">Nature</label>
+      </p>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2026 Terengganu Tourism Office</p>
+    <address>
+      <a href="mailto:info@visitterengganu.my">info@visitterengganu.my</a>
+    </address>
+  </footer>
+
+</body>
+</html>

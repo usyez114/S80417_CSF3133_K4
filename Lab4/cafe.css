@@ -1,0 +1,82 @@
+/* remove bullets from the lists */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* link states, order must be link > visited > hover > active */
+a:link {
+  color: #1A5276;
+}
+a:visited {
+  color: #7D3C98;
+}
+a:hover {
+  color: #E67E22;
+}
+a:active {
+  color: #C0392B;
+}
+
+/* nav bar */
+nav ul {
+  background-color: #4E342E;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #4E342E;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav a:link, nav a:visited {
+  color: white;
+}
+/* different colour when mouse is over the menu item */
+nav a:hover {
+  background-color: #E67E22;
+  color: white;
+}
+
+/* heading with line above */
+h1 {
+  text-decoration: overline;
+}
+
+p {
+  color: #333333;
+  text-align: justify;
+}
+
+.intro {
+  font-size: 18px;
+  background-color: #FDEBD0;
+}
+
+/* new price, bold and red */
+.highlight {
+  font-weight: bold;
+  color: #C0392B;
+}
+
+/* old price is crossed out */
+.old-price {
+  text-decoration: line-through;
+}
+
+/* video fits small screens */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* feedback form */
+.feedback-form {
+  background-color: #FDEBD0;
+  padding: 20px;
+  border: 2px solid #4E342E;
+}
