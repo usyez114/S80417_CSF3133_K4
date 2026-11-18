@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Bookstore</title>
+    <!-- Added second Google Font (Merriweather) for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<!--
+  Error 1 (shop.css, Line 1): FontFamily name has a typo ("Robotto" should be "Roboto").
+  Error 2 (shop.css, Line 4): Background property name has a typo ("bacground-repeat" should be "background-repeat").
+  Error 3 (shop.css, Line 5): Background property name has a typo ("bacground-position" should be "background-position").
+  Error 4 (shop.html, Line 18): Inline style color hex code is incorrect ("#184F72" should be blue).
+  Error 5 (shop.html, Line 20): Table ID attribute has a typo ("id=\"product\"" should be "id=\"products\"").
+  Error 6 (shop.css, Line 18): Navigation link display property is incorrect ("display: inline;" should be "display: block;").
+  Error 7 (shop.css, Line 37): Table row hover selector syntax is invalid ("#products tr:hovered" should be "#products tr:hover").
+  Error 8 (shop.html, Line 6): Stylesheet link rel attribute value has a typo ("rel=\"stylesheets\"" should be "rel=\"stylesheet\"").
+  Error 9 (shop.html, Line 27): Footer tag is improperly formatted.
+  Error 10 (shop.css, Line 21): Missing proper block display/padding settings for navigation links.
+-->
+
+    <!-- Requirement 5: Header with background image (cover) and white text -->
+    <header>
+        <h1 style="color: white; text-align: center;">Campus Bookstore</h1>
+    </header>
+
+    <!-- Requirement 5: Navigation structure -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Requirement 5: Main content structure -->
+    <main>
+        <p>Textbooks, stationery and more for every student.</p>
+        
+        <table id="products">
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th class="price-col">Price (RM)</th>
+            </tr>
+            <tr>
+                <td>Web Design Basics</td>
+                <td>Textbook</td>
+                <td class="price-col">45.00</td>
+            </tr>
+            <tr>
+                <td>A4 Notebook</td>
+                <td>Stationery</td>
+                <td class="price-col">6.50</td>
+            </tr>
+            <tr>
+                <td>USB Drive 32GB</td>
+                <td>Gadget</td>
+                <td class="price-col">25.00</td>
+            </tr>
+            <tr>
+                <td>Highlighter Set</td>
+                <td>Stationery</td>
+                <td class="price-col">9.90</td>
+            </tr>
+        </table>
+    </main>
+
+    <!-- Requirement 5: Footer structure -->
+    <footer>
+        <p>&copy; 2026 Campus Bookstore</p>
+    </footer>
+</body>
+</html>
