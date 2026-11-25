@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Grade Calculator</title>
+<!-- NEW: link the stylesheet -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Student Grade Calculator</h2>
+<!-- FIXED: "return" added so a false result stops the form from submitting -->
+<form name="gradeForm" onsubmit="return checkMark()">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name"><br>
+<label for="mark">Mark (0-100):</label>
+<input type="text" id="mark" name="mark"><br>
+<button type="submit">Check Grade</button>
+<!-- NEW: Random Mark button (type="button" so it does not submit the form) -->
+<button type="button" onclick="randomMark()">Random Mark</button>
+</form>
+<p id="result"></p>
+<!-- NEW: shows the date and time of checking -->
+<p id="checkedOn"></p>
+<!-- FIXED: showTable (capital T) -->
+<button onclick="showTable()">Show Grade Table</button>
+<div id="tableContainer"></div>
+<!-- FIXED: grade.js (was grades.js) -->
+<script src="grade.js"></script>
+</body>
+</html>

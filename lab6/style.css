@@ -1,38 +1,22 @@
+/* Page */
+body { font-family: Arial, sans-serif; background: #f2f5f8; margin: 20px; color: #222; font-size: 14px; }
+h2 { color: #1f4e79; }
 
-body { font-family: Arial, sans-serif; background: #f2f5f8; margin: 0; padding: 12px 20px; color: #222; }
+/* Form box: labels above the inputs, like the example */
+form { background: white; display: inline-block; padding: 14px 18px; border: 1px solid #e3e8ee; border-radius: 6px; }
+form br { display: none; }
+label { display: block; font-weight: bold; margin-top: 8px; }
+input { display: block; padding: 5px; width: 220px; margin-top: 4px; }
 
-
-header { background: #1f4e79; color: white; padding: 12px 20px; border-radius: 6px; }
-header h1 { margin: 0 0 4px; font-size: 24px; }
-header p { margin: 0; font-size: 14px; }
-
-
-section { background: white; padding: 12px 16px; margin-top: 12px; border: 1px solid #e3e8ee; border-radius: 6px; }
-h2 { margin: 0 0 8px; font-size: 18px; }
-section p { margin: 6px 0; }
-
-
-button { padding: 7px 16px; background: #2b7bba; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 13px; margin: 4px 4px 4px 0; }
+/* Buttons with hover effect */
+button { padding: 8px 14px; background: #2b7bba; color: white; border: none; border-radius: 4px; cursor: pointer; margin: 10px 4px 6px 0; }
 button:hover { background: #1f4e79; }
 
+/* Result and date text */
+#result { font-weight: bold; color: green; margin-bottom: 0; }
+#checkedOn { font-weight: bold; color: green; margin-top: 0; }
 
-input { padding: 5px; width: 200px; }
-
-
-.arena { display: flex; justify-content: center; align-items: center; gap: 24px; text-align: center; }
-.arena p { font-weight: bold; margin: 0 0 6px; }
-img { width: 120px; height: 120px; }
-.vs { font-size: 22px; font-weight: bold; color: #666; }
-
-
-#result { font-size: 20px; font-weight: bold; }
-#result:empty { display: none; }
-
-
-table { border-collapse: collapse; width: 100%; margin-bottom: 10px; }
-th, td { border: 1px solid #bbb; padding: 6px; text-align: center; }
+/* Grade table: borders, padding and header background */
+table { border-collapse: collapse; margin-top: 8px; background: white; }
+th, td { border: 1px solid #ddd; padding: 6px 28px; text-align: center; }
 th { background: #1f4e79; color: white; }
-
-
-footer { text-align: center; color: #666; font-size: 13px; margin-top: 12px; }
-footer p { margin: 4px 0; }
